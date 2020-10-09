@@ -1,3 +1,5 @@
+const user = require('../models/user');
+
 class UserController {
   static routes() {
     return {
@@ -8,14 +10,13 @@ class UserController {
 
   getUsers() {
     return (req, res) => {
-      res.send('getall');
+      user.getUsers(res);
     };
   }
 
   addUser() {
     return (req, res) => {
-      console.log(req.body);
-      res.send('addUser');
+      user.addUser(res, req.body);
     };
   }
 }
