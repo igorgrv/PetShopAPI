@@ -1,0 +1,28 @@
+{
+  "name": "petshopapi",
+  "version": "1.0.0",
+  "description": "This is a simple RESTFul project, using express and mysql",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igorgrv/PetShopAPI.git"
+  },
+  "author": "Igor Romero",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/igorgrv/PetShopAPI/issues"
+  },
+  "homepage": "https://github.com/igorgrv/PetShopAPI#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "consign": "^0.1.6",
+    "express": "^4.17.1",
+    "moment": "^2.29.1",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.4"
+  }
+}
