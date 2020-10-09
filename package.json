@@ -1,5 +1,5 @@
 {
-  "name": "petshopapi",
+  "name": "talent-recruiter",
   "version": "1.0.0",
   "description": "This is a simple RESTFul project, using express and mysql",
   "main": "index.js",
