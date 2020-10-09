@@ -38,7 +38,7 @@ class User {
     ];
 
     const errors = validations.filter((fields) => !fields.valid);
-		const hasError = errors.length;
+    const hasError = errors.length;
     if (hasError) {
       res.status(400).json(errors);
     } else {
@@ -49,6 +49,33 @@ class User {
         else res.status(200).json(userDate);
       });
     }
+	}
+
+  getUser(res, id) {
+    const sql = 'SELECT * FROM users WHERE id = ?';
+    connection.query(sql, id, (err, result) => {
+      const user = result[0];
+      if (err) res.status(400).json(err);
+      res.status(200).json(user);
+    });
+  }
+
+  updateUser(res, user, id) {
+		const sql = 'UPDATE users SET ? WHERE id = ?';
+
+    connection.query(sql, [user, id], (err, result) => {
+      if (err) res.status(400).json(err);
+      res.status(200).json(user);
+    });
+  }
+
+  deleteUser(res, id) {
+    const sql = 'DELETE FROM users WHERE id = ?';
+
+    connection.query(sql, id, (err, result) => {
+      if (err) res.status(400).json(err);
+      res.status(200).json(id);
+    });
   }
 }
 
